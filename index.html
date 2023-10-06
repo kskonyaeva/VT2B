@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <section class="pay">
+      <div class="container">
+        <div class="pay__content">
+          <h1 class="pay__title">Оплата</h1>
+
+          <form class="form form__items" method="post">
+            <input class="form__item" type="text" placeholder="ФИО" name="name"/>
+            <input
+              class="email form__item"
+              type="text"
+              name="email"
+              id="email"
+              placeholder="Электронная почта"
+            />
+            <input
+              class="phone form__item"
+              type="text"
+              name="phone"
+              id="phone"
+              placeholder="+7 (___) ___-__-__"
+            />
+            <input
+              class="form__item"
+              type="text"
+              placeholder="Вид деятельности"
+              name="activity"
+            />
+
+            <div class="dropdown">
+              <input
+                type="text"
+                class="text2"
+                readonly
+                placeholder="Выберите услугу"
+              />
+              <div class="option">
+                <div
+                  class="dropdown__workplace"
+                  onclick="show('Рабочее место')"
+                >
+                  Рабочее место
+                </div>
+                <div class="dropdown__hall" onclick="show('Конференц зал')">
+                  Конференц зал
+                </div>
+                <div class="dropdown__meeting" onclick="show('Переговорка')">
+                  Переговорка
+                </div>
+              </div>
+            </div>
+
+            <div class="tariff__workplace">
+              <div class="radio-inputs">
+                <label class="radio radio-1">
+                  <input type="radio" name="radio" checked="" />
+                  <span class="name">Гость</span>
+                </label>
+                <label class="radio radio-2">
+                  <input type="radio" name="radio" />
+                  <span class="name">Резидент</span>
+                </label>
+
+                <label class="radio radio-3">
+                  <input type="radio" name="radio" />
+                  <span class="name">Агенство</span>
+                </label>
+              </div>
+
+              <div class="wrapper-1 active">
+                <div class="card">
+                  <input
+                    class="input"
+                    type="radio"
+                    name="card"
+                    value="4hours"
+                  />
+                  <span class="check"></span>
+                  <label class="label">
+                    <div class="title">4 часа</div>
+                    <div class="price">
+                      300
+                      <span class="span">₽</span>
+                    </div>
+                  </label>
+                </div>
+                <div class="card">
+                  <input
+                    class="input"
+                    type="radio"
+                    name="card"
+                    value="standart"
+                  />
+                  <span class="check"></span>
+                  <label class="label">
+                    <div class="title">1 день</div>
+                    <div class="price">
+                      400
+                      <span class="span">₽</span>
+                    </div>
+                  </label>
+                </div>
+                <div class="card">
+                  <input
+                    class="input"
+                    type="radio"
+                    name="card"
+                    value="premium"
+                  />
+                  <span class="check"></span>
+                  <label class="label">
+                    <div class="title">1 месяц</div>
+                    <div class="price">
+                      3500
+                      <span class="span">₽</span>
+                    </div>
+                  </label>
+                </div>
+                <div class="card">
+                  <input
+                    class="input"
+                    type="radio"
+                    name="card"
+                    value="premium"
+                  />
+                  <span class="check"></span>
+                  <label class="label">
+                    <div class="title">3 месяца</div>
+                    <div class="price">
+                      9000
+                      <span class="span">₽</span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+              <div class="wrapper-2">
+                <div class="card">
+                  <input
+                    class="input"
+                    type="radio"
+                    name="card"
+                    value="premium"
+                  />
+                  <span class="check"></span>
+                  <label class="label">
+                    <div class="title">1 месяц</div>
+                    <div class="price">
+                      3500
+                      <span class="span">₽</span>
+                    </div>
+                  </label>
+                </div>
+                <div class="card">
+                  <input
+                    class="input"
+                    type="radio"
+                    name="card"
+                    value="premium"
+                  />
+                  <span class="check"></span>
+                  <label class="label">
+                    <div class="title">3 месяца</div>
+                    <div class="price">
+                      9000
+                      <span class="span">₽</span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+              <div class="wrapper-3">
+                <div class="card">
+                  <input
+                    class="input"
+                    type="radio"
+                    name="card"
+                    value="4hours"
+                  />
+                  <span class="check"></span>
+                  <label class="label">
+                    <div class="title">-</div>
+                    <div class="price">
+                      -
+                      <span class="span">₽</span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="tariff__meeting">
+              <div class="wrapper">
+                <div class="card">
+                  <input
+                    class="input"
+                    type="radio"
+                    name="card"
+                    value="4hours"
+                  />
+                  <span class="check"></span>
+                  <label class="label">
+                    <div class="title">1 час</div>
+                    <div class="price">
+                      200
+                      <span class="span">₽</span>
+                    </div>
+                  </label>
+                </div>
+                <div class="card">
+                  <input
+                    class="input"
+                    type="radio"
+                    name="card"
+                    value="4hours"
+                  />
+                  <span class="check"></span>
+                  <label class="label">
+                    <div class="title">Пол дня(4 часа)</div>
+                    <div class="price">
+                      500
+                      <span class="span">₽</span>
+                    </div>
+                  </label>
+                </div>
+                <div class="card">
+                  <input
+                    class="input"
+                    type="radio"
+                    name="card"
+                    value="standart"
+                  />
+                  <span class="check"></span>
+                  <label class="label">
+                    <div class="title">День</div>
+                    <div class="price">
+                      900
+                      <span class="span">₽</span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="tariff__hall">
+              <div class="radio-inputs">
+                <label class="radio hall__radio1">
+                  <input type="radio" name="radio" checked="" />
+                  <span class="name">1 час</span>
+                </label>
+                <label class="radio hall__radio2">
+                  <input type="radio" name="radio" />
+                  <span class="name">2 часа</span>
+                </label>
+
+                <label class="radio hall__radio3">
+                  <input type="radio" name="radio" />
+                  <span class="name">3 часа</span>
+                </label>
+
+                <label class="radio hall__radio4">
+                  <input type="radio" name="radio" />
+                  <span class="name">4 часа</span>
+                </label>
+
+                <label class="radio hall__radio5">
+                  <input type="radio" name="radio" />
+                  <span class="name">5 часов</span>
+                </label>
+
+                <label class="radio hall__radio6">
+                  <input type="radio" name="radio" />
+                  <span class="name">6 часов</span>
+                </label>
+
+                <label class="radio hall__radio7">
+                  <input type="radio" name="radio" />
+                  <span class="name">7 часов</span>
+                </label>
+
+                <label class="radio hall__radio8">
+                  <input type="radio" name="radio" />
+                  <span class="name">8 часов</span>
+                </label>
+
+              </div>
+
+              <div class="hall__content">
+              <p>Оплата</p>
+              <p class="hall__pay1 active2">500₽</p>
+              <p class="hall__pay2">1000₽</p>
+              <p class="hall__pay3">1500₽</p>
+              <p class="hall__pay4">2000₽</p>
+              <p class="hall__pay5">2500₽</p>
+              <p class="hall__pay6">3000₽</p>
+              <p class="hall__pay7">3500₽</p>
+              <p class="hall__pay8">4000₽</p>
+              </div>
+
+            </div>
+            </div>
+
+            <input class="button" type="submit" value="Отправить" />
+          </form>
+
+          
+        </div>
+      </div>
+    </section>
+
+    <script src="https://unpkg.com/imask"></script>
+    <script src="js/main.js"></script>
+
+    
+  </body>
+</html>
